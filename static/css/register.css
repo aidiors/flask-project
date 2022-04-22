@@ -1,0 +1,61 @@
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+section .section {
+	margin: 65px 400px;
+	background-color: #F1F1F1;
+	min-height: 808px;
+	
+}
+
+section .title {
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+ 
+section .submit_btn {
+	text-decoration: none;
+    color: #0E0E0E;
+	font-size: 24px;
+	padding: 6px 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+	border-radius: 4px;
+	background-color: #b3b3b3;
+    border: 1px solid #a8a8a8;
+    width: 100%;
+	text-align: center;
+}
+
+section .submit_btn:hover {
+	background-color: #7fb881;
+    color: #410068;
+}
+
+
+section .login_btn {
+	text-decoration: none;
+    color: #0E0E0E;
+	font-size: 24px;
+	padding: 6px 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+	border-radius: 4px;
+	background-color: #b3b3b3;
+    border: 1px solid #a8a8a8;
+}
+
+section .login_btn:hover {
+	background-color: #7fb881;
+    color: #410068;
+}
+
+section .label {
+	font-size: 24px;
+	margin-left: 5px;
+}

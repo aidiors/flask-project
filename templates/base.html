@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+        <title>{% block title %} {% endblock %}</title>
+        <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/{{ css_file }}"/>
+    </head>
+
+    <body>
+        <header id="header" class="header">
+            <p><a href="/"><img src="/static/img/logo.png" height="60" alt="Главная" class="logo"></a></p>
+            <div class="right_header">
+                <ul class="menu">
+                    {% if current_user.is_authenticated %}
+                        <li><a href="/add_recipe">Добавить рецепт</a></li>
+                        <li><a href="/my_recipes">Мои рецепты</a></li>
+                        {% if current_user.rights %}
+                            <li><a href="/admin_panel">Панель администратора</a></li>
+                        {% endif %}
+                    {% endif %}
+                    {% if current_user.is_authenticated %}
+                        <li><a href="/logout">{{ current_user.name }}</a></li>
+                    {% else %}
+                        <li><a href="/login">Войти</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </header>
+        {% block content %} {% endblock %}
+    </body>
+
+</html>

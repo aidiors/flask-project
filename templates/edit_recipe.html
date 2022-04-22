@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Изменить рецепт
+{% endblock %}
+
+{% block content %}
+<section id="main" class="main">
+    <div class="section">
+        <h2 class="title">Изменение рецепта</h2>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.recipe_title.label(class="label") }}<br>
+                {{ form.recipe_title(class="form-control", type="recipe_title") }}<br>
+                {% for error in form.recipe_title.errors %}
+                    <p class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </p>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.recipe_content.label(class="label") }}<br>
+                {{ form.recipe_content(class="form-control", type="recipe_content") }}<br>
+                {% for error in form.recipe_content.errors %}
+                    <p class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </p>
+                {% endfor %}
+            </p>
+            <p>{{ form.submit(type="submit", class="submit_btn") }}</p>
+            {{message}}
+        </form>
+    </div>
+</section>
+{% endblock %}

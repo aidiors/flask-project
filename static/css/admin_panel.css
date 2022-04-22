@@ -1,0 +1,71 @@
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+section .recipes {
+	margin: 65px 400px;
+	background-color: #F1F1F1;
+
+}
+
+section .title {
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+section .recipe {
+	margin-left: 10px;
+}
+
+section .author {
+	color: #7E7E7E;
+	font-size: 18px;
+}
+
+section .recipe_title {
+	font-size: 28px;
+	text-decoration: none;
+	color: #0E0E0E;
+	transition: color .2s ease;
+}
+
+section .recipe_title:hover {
+    color: #410068;
+}
+
+
+section .btn a{
+	text-decoration: none;
+    color: #0E0E0E;
+	font-size: 16px;
+	padding: 3px 16px;;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+	border-radius: 4px;
+}
+section .edit {
+	background-color: #b3b3b3;
+	color: #0E0E0E;
+    border: 1px solid #a8a8a8;
+}
+
+section .edit:hover {
+	background-color: #7fb881;
+    color: #410068;
+}
+
+section .delete {
+	background-color: #b3b3b3;
+	color: #0E0E0E;
+	border: 1px solid #a8a8a8;
+}
+
+section .delete:hover {
+	background-color: #ff4d4d;
+    color: #410068;
+}
